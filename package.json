@@ -11,8 +11,6 @@
     "db:push": "drizzle-kit push --config ./local_modules/@workspace/db/drizzle.config.ts"
   },
   "dependencies": {
-    "@clerk/express": "^2.1.50",
-    "@clerk/shared": "^4.26.0",
     "@google-cloud/storage": "^7.21.0",
     "@workspace/api-zod": "file:./local_modules/@workspace/api-zod",
     "@workspace/db": "file:./local_modules/@workspace/db",
@@ -20,8 +18,8 @@
     "cors": "^2.8.6",
     "drizzle-orm": "^0.45.2",
     "express": "^5.2.1",
+    "firebase-admin": "^13.0.0",
     "google-auth-library": "^11.0.0",
-    "http-proxy-middleware": "^4.2.0",
     "pino": "^9.14.0",
     "pino-http": "^10.5.0"
   },

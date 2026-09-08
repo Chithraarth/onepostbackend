@@ -5,7 +5,7 @@ Standalone Express 5 API server for OnePost.
 ## Setup
 ```bash
 npm install
-cp .env.example .env   # DATABASE_URL + Clerk keys
+cp .env.example .env   # DATABASE_URL + Firebase Admin credentials
 npm run db:push        # create/update database tables (drizzle-kit)
 npm run dev            # builds with esbuild and starts on PORT (default 8080)
 ```
@@ -16,6 +16,7 @@ npm run dev            # builds with esbuild and starts on PORT (default 8080)
 - `npm run db:push` – push the Drizzle schema to Postgres
 
 ## Notes
+- Firebase Admin SDK init: `src/lib/firebase.ts`. Auth middleware: `src/middlewares/requireAuth.ts` (verifies `Authorization: Bearer <idToken>`; falls back to a fixed preview user outside production unless `PREVIEW_MODE=false`).
 - Database schema + Drizzle client: `local_modules/@workspace/db`
 - Zod API validators: `local_modules/@workspace/api-zod`
 - File uploads (`src/lib/objectStorage.ts`) were built for Replit App Storage; outside Replit, wire it to your own Google Cloud Storage bucket/credentials.

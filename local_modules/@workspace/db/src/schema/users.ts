@@ -1,7 +1,7 @@
 import { pgTable, text, boolean, timestamp } from "drizzle-orm/pg-core";
 
 export const usersTable = pgTable("users", {
-  // Clerk user id
+  // Firebase Auth uid
   id: text("id").primaryKey(),
   email: text("email"),
   // "none" = no active subscription, "trial" = free month, "active" = paid
