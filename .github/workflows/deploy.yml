@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [prod]
+    branches: [main]
 
 jobs:
   push-image:
